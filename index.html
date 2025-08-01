@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>แปลงข้อความลูกค้า</title>
+  <script src="script.js"></script>
+  <style>
+    body { font-family: 'Prompt', sans-serif; background: #f5f5f5; padding: 2em; }
+    textarea, select, button { width: 100%; margin-bottom: 1em; padding: 1em; font-size: 1em; }
+    button { background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+    button:hover { background-color: #45a049; }
+    #output { background: #fff; padding: 1em; border-radius: 5px; min-height: 150px; }
+  </style>
+</head>
+<body>
+
+  <h2>📦 แปลงข้อความลูกค้า (ลบแถวแอดมิน)</h2>
+
+  <textarea id="inputText" placeholder="วางข้อความลูกค้า..."></textarea>
+  <button onclick="convertText()">แปลงข้อความ</button>
+  <button onclick="document.getElementById('inputText').value=''; document.getElementById('output').innerText='';" style="background-color:#e74c3c;">ล้างข้อมูล</button>
+
+  <h3>📄 ผลลัพธ์:</h3>
+  <pre id="output"></pre>
+  <button onclick="copyOutput()" style="background-color:#3498db;">📋 คัดลอกผลลัพธ์</button>
+
+</body>
+</html>
